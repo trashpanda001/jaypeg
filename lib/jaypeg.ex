@@ -25,7 +25,7 @@ defmodule Jaypeg do
 
   """
   @spec decode(binary) ::
-          {:ok, binary} | {:error, :fmemopen} | {:error, :bad_jpeg}
+          {:ok, binary, Keyword.t()} | {:error, :fmemopen} | {:error, :bad_jpeg}
   def decode(_encoded_image) do
     # coveralls-ignore-start
     :erlang.nif_error(:nif_not_loaded)
